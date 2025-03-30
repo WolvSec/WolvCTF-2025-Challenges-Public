@@ -119,24 +119,23 @@
 - shlswnt  
 - cogsworth64  
 - EmptyBytes  
-- ethan?
 
 ## Sponsors
 
 This CTF couldn't be brought to you without our gracious sponsors!
 
-** Platinum **
+### Platinum  
 [Binary Ninja](https://binary.ninja/)  
 [RET 2 Systems](https://wargames.ret2.systems/)  
 
-** Gold **
+### Gold
 [Caesar Creek Software](https://www.cc-sw.com/)  
 [OffSec](https://www.offsec.com/)  
 [Trail of Bits](https://www.trailofbits.com/)  
 
-** Silver **
+### Silver 
 [Bounty Security](https://bountysecurity.ai/)  
 
-** Bronze **
+### Bronze
 [Altered Security](https://www.alteredsecurity.com/)  
 [.xyz](https://gen.xyz/)  
