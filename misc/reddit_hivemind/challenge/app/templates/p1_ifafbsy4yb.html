@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            background-color: #ffedd5; /* Light orange background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff4500;
+            font-size: 3rem;
+        }
+
+        h2 {
+            color: #ff4500;
+            font-size: 2rem;
+            margin-top: 30px;
+        }
+
+        p {
+            color: #333;
+            font-size: 1.2rem;
+        }
+
+        .secret {
+            font-size: 1.2rem;
+            font-family: monospace;
+            background-color: #ff4500;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            height: 150px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #ff4500;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e03e00;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Success</h1>
+    <p>We've found it! The secret behind Reddit Karma.</p>
+    
+    <p class="flag">wctf{7h4Nk5_f0r_7h3_g01d_k1nD_57r4Ng3r_z461htuqlh}</p>
+
+    <h2>Part 2 - Write a comment</h2>
+    <form action="/comment_gIknS4kq1ht3Ab1TS" method="post">
+        <textarea name="comment" placeholder="Your comment must get downvoted, and must contain the word 'Harden'"></textarea><br><br>
+        <button type="submit">Submit Comment</button>
+    </form>
+
+</body>
+</html>

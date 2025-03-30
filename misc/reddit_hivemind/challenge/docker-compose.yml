@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  the-void :
+    build: .
+    image: reddit-hivemind:1.0
+    container_name: reddit-hivemind
+    init: true
+    restart: always
+    ports:
+      - 3000:3000

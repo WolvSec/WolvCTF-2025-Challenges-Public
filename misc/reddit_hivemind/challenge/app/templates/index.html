@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Hivemind</title>
+    <style>
+        body {
+            background-color: #ffedd5; /* Light orange background */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #ff4500;
+        }
+
+        .upload-container {
+            background-color: #fff;
+            border: 2px solid #ff4500;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e03e00;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Upload Your Predictions</h1>
+<div class="upload-container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".txt" required><br><br>
+        <button type="submit">Submit File</button>
+    </form>
+</div>
+
+</body>
+</html>
