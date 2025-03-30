@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: turingincomplete
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/turingincomplete-healthcheck:aadbd26915579fafb8a05871709405c57313457cc35353ada72db33bdf09d60a
+  image: eu.gcr.io/kctf-453514/turingincomplete-challenge:55937af8bddc16920f6a654a6d9e5bf53bf0ff3fd10d913d51463849404e71e6

@@ -1,0 +1,1 @@
+Two states and sixteen colors can do a lot of things.

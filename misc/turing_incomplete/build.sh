@@ -1,0 +1,1 @@
+tar -czf dist.tar.gz challenge/machine.py challenge/main.py
