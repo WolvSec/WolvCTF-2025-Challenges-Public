@@ -1,0 +1,4 @@
+<?php
+chdir('/var/www/html');
+echo(shell_exec('./get_flag'));
+?>

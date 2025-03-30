@@ -1,0 +1,8 @@
+services:
+  wctf-2025-art-contest1:
+    build: .
+    image: wctf-2025-art-contest1:1
+    container_name: wctf-2025-art-contest1
+    restart: always
+    ports:
+      - "8000:80"

