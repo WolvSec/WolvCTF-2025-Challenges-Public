@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  the-void :
+    build: .
+    image: the-void:1.0
+    container_name: the-void
+    init: true
+    restart: always
+    ports:
+      - 3000:3000

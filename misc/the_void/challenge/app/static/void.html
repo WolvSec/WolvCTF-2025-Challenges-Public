@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Void</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+            justify-content: center;
+            align-items: center;
+        }
+        .spinner {
+            width: 600px;
+            height: 600px;
+            background-image: url('/static/void.jpeg');
+            background-size: cover;
+            border-radius: 50%;
+            animation: spin 10s linear infinite;
+            cursor: pointer;
+        }
+        .file-input {
+            display: none;
+        }
+        @keyframes spin {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner" id="spinner"></div>
+    <input type="file" id="fileInput" class="file-input" accept="image/*">
+    <script>
+        const spinner = document.getElementById('spinner');
+        const fileInput = document.getElementById('fileInput');
+
+        spinner.addEventListener('click', function() {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                fetch('/upload', {
+                    method: 'POST',
+                    body: formData,
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = `/result?filename=${data.filename}&trashtype=${data.type}&data=${data.data}`;
+                    } else if (data.type){
+                        alert('Dude you cant feed the void these things. Think about the environment. It cant digest ' + data.type);
+                    }
+                    else{
+                        alert('Failed while uploading file');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error uploading file:', error);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
