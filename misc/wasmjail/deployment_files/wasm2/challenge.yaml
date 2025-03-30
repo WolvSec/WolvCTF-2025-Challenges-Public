@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: wasm2
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/wasm2-healthcheck:7d6723471bad8af25981b657fe5d04a889520ee22fe7ff445d381b6f110ba115
+  image: eu.gcr.io/kctf-453514/wasm2-challenge:5d7c1b0505d9f30ec12720c69aa0acedaba7046608d7f0797d54701784539a27

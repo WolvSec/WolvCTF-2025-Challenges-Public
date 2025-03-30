@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: wasm4
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/wasm4-healthcheck:c7ba8d43b1e09aa4e86fec56f50ea189edff682d4ffe116d0bb21453e5680f37
+  image: eu.gcr.io/kctf-453514/wasm4-challenge:0e88d1b12d03119b10a92c1ba47b6e3ffd3fe7fa17663b1b4b6f9b64452c6646

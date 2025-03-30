@@ -1,0 +1,13 @@
+(module
+  (func $arrayctor (import "i" "Array") (param i32 i32 i32 i32) (result externref))
+  (func $bufferctor (import "i" "Buffer") (param externref) (result externref))
+  (func $stringctor (import "i" "String") (param externref) (result externref))
+  (func $win (import "i" "win") (param externref))
+  (func $main (export "main")
+    (i32.const 0xf0) (i32.const 0x9f) (i32.const 0xa5) (i32.const 0xba)
+    (call $arrayctor)
+    (call $bufferctor)
+    (call $stringctor)
+    (call $win)
+  )
+)

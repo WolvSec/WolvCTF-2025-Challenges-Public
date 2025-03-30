@@ -1,0 +1,73 @@
+version: "2.2"
+
+services:
+  wasmjail0:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FILE: 0.js
+
+    privileged: true
+    image: wasmjail0:1
+    container_name: wasmjail0
+    init: true
+    restart: always
+    ports:
+      - "31337:1337"
+  wasmjail1:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FILE: 1.js
+
+    privileged: true
+    image: wasmjail1:1
+    container_name: wasmjail1
+    init: true
+    restart: always
+    ports:
+      - "31338:1337"
+  wasmjail2:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FILE: 2.js
+
+    privileged: true
+    image: wasmjail2:1
+    container_name: wasmjail2
+    init: true
+    restart: always
+    ports:
+      - "31339:1337"
+  wasmjail3:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FILE: 3.js
+
+    privileged: true
+    image: wasmjail3:1
+    container_name: wasmjail3
+    init: true
+    restart: always
+    ports:
+      - "31340:1337"
+  wasmjail4:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      args:
+        FILE: 4.js
+
+    privileged: true
+    image: wasmjail4:1
+    container_name: wasmjail4
+    init: true
+    restart: always
+    ports:
+      - "31341:1337"
