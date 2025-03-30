@@ -1,0 +1,3 @@
+I hate when when RE challenges just make me do something backwards...
+
+HINT: You might want to use a decompiler

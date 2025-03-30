@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: p0wn3d2
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: kind/healthcheck:2ab618ed8d430ac670b3a4bbc9a7199502af25555f09f7353b669b08ead08b54
+  image: kind/challenge:55afaf109112c92140449e03df9e44ab47548ce3da08669a5d136a38d5111b32
