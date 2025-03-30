@@ -1,0 +1,28 @@
+┌──(kali㉿kali)-[~/ctf/Passwords]
+└─$ keepass2john Database.kdbx > keepass.hash
+                                                                  
+┌──(kali㉿kali)-[~/ctf/Passwords]
+└─$ keepass2john Database.kdbx               
+Database:$keepass$*2*6000*0*5bd85bff1c654df5d8cb8f64b877ea179b66978615917c39faf6edd98444928b*dec1f1a8a46d2257b1c536800ccea618d15523c983162f1a760d0f0e3f32bed6*02dc62f9e295c9a256e4e231b3102c1a*8ed6478291ac58151a98e7465f10a11e8cafc1706d048ef4f94fe51453f091bc*193dd9a5673c4a3f5b33dd59639f27760f03285044f14eacc652f4a441b45413
+                                                                  
+┌──(kali㉿kali)-[~/ctf/Passwords]
+└─$ keepass2john Database.kdbx > keepass.hash                    
+                                                                  
+┌──(kali㉿kali)-[~/ctf/Passwords]
+└─$ john --wordlist=/usr/share/wordlists/rockyou.txt keepass.hash
+Using default input encoding: UTF-8
+Loaded 1 password hash (KeePass [SHA256 AES 32/64])
+Cost 1 (iteration count) is 6000 for all loaded hashes
+Cost 2 (version) is 2 for all loaded hashes
+Cost 3 (algorithm [0=AES 1=TwoFish 2=ChaCha]) is 0 for all loaded hashes
+Will run 4 OpenMP threads
+Press 'q' or Ctrl-C to abort, almost any other key for status
+0g 0:00:00:47 0.35% (ETA: 02:50:40) 0g/s 1297p/s 1297c/s 1297C/s 159753159753..141106
+goblue1          (Database)     
+1g 0:00:01:10 DONE (2025-03-09 23:09) 0.01424g/s 1269p/s 1269c/s 1269C/s gobucks1..giana
+Use the "--show" option to display all of the cracked passwords reliably
+Session completed. 
+                                                                  
+┌──(kali㉿kali)-[~/ctf/Passwords]
+└─$ 
+
