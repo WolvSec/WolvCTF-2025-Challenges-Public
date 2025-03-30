@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: drywall
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/drywall-healthcheck:f44844064fcc4ab0ec7861967ce548c7e44f24761909c76bad09ab241fa5d2d2
+  image: eu.gcr.io/kctf-453514/drywall-challenge:34261fd63340c3ad176ff7117cee051bd704466702b35ea6b1d4f4f787425993

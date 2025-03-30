@@ -1,0 +1,7 @@
+image: gcc:9.3.0
+
+
+aliases:
+  build:
+    script:
+      - gcc labgrown.c  -z execstack -z now -fstack-protector-all -fno-pie -no-pie -w -o chal

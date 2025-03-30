@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: labgrown
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/labgrown-healthcheck:20c05554669a88b9371cef3725ee7b48b78cd2581f3361826649b9c253419da7
+  image: eu.gcr.io/kctf-453514/labgrown-challenge:d36b876d2fe0a64465f80e6e50cda2c221dd3694f8a6abbeac948df023fddc64

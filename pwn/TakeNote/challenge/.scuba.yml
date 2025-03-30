@@ -1,0 +1,6 @@
+image: gcc:9.4.0
+
+aliases:
+  build:
+    script:
+      - gcc takenote.c -Wl,-z,norelro -pie -fPIE -fstack-protector-all -w -o chal 

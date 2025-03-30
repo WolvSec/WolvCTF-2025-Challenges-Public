@@ -1,0 +1,5 @@
+0x0000000000000000:  B8 BD D0 C1 40       mov eax, 0x40c1d0bd
+0x0000000000000005:  05 7E 2F 3E BF       add eax, 0xbf3e2f7e
+0x000000000000000a:  BC E1 60 11 3C       mov esp, 0x3c1160e1
+0x000000000000000f:  81 F4 E9 40 51 3C    xor esp, 0x3c5140e9
+0x0000000000000015:  8B FC                mov edi, esp

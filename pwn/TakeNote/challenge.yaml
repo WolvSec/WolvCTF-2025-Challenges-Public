@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: takenote
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/takenote-healthcheck:40b63b7ce7c65d694988d8ec2eddb9e28adb79ac045fdf03713e5b7fc6b7c3f0
+  image: eu.gcr.io/kctf-453514/takenote-challenge:51d53c21bd645a60742fae1b567e76c63b6078fc3d9b8abc736430177fc330f9

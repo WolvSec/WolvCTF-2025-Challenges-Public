@@ -1,0 +1,17 @@
+image: gcc:9.4.0
+aliases:
+
+  dist:
+    script:
+      - make
+      - echo "wctf{test_flag}" > /tmp/flag.txt
+      - tar -czf dist.tar.gz VC1K flag.txt
+
+  build:
+    script:
+      - make; cp VC1K chal
+
+  clean:
+    script:
+    - make clean
+    - rm dist.tar.gz /tmp/flag.txt

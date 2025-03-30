@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: vc1k
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/vc1k-healthcheck:1792020aef3df58e278768523869eafd6c54edf1dd718f266ded6d0846bf5244
+  image: eu.gcr.io/kctf-453514/vc1k-challenge:d4eab57ad30181ab185f32b4cfbca1e6c7d1ae9d68fc7235782f7dc53db71246

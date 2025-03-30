@@ -1,0 +1,6 @@
+image: gcc-libseccomp
+
+aliases:
+  build:
+    script:
+      - g++ vuln.cpp -l seccomp -fno-stack-protector -Wl,-z,relro,-z,now -fPIE -pie -o chal 
