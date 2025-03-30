@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: office
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/office-healthcheck:eac9df0704304fc7e2004c1276afd4aa648c119cfaaaa77a447bb847350170e2
+  image: eu.gcr.io/kctf-453514/office-challenge:0a66f762074da0251014a2690309a43c074890f998f89a17df0945dae564a17b

@@ -1,0 +1,7 @@
+image: gcc:12.2.0
+
+aliases:
+  build:
+    script:
+      - gcc vuln.c -s -o chal 
+
