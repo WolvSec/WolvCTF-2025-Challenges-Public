@@ -1,0 +1,14 @@
+if you got here then you are doing great
+i was stupd thinking that my code was really unbreakable
+however making this was a lot of fun and i hope that you had fun two
+you truly are one of the elite my guy
+the special words you must extract to get the flag are misspelled
+like the following word persn
+to make this solvable i need to make this longer so watch me talk for a minute
+this challenge was a reference to the kryptos code
+its a very interesting story and i am sure you can find stuff about it on the internet
+actually the real code had four sections and the last one remains unsolved to this day
+also the first one was not a caesar cipher so thats another difference 
+doing two vigniere ciphers felt repetitieve so i had to change it up 
+maybe now it is long enough
+good luck and have fun with the rest of the competition

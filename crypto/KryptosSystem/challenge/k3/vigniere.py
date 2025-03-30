@@ -1,0 +1,12 @@
+
+plaintext = 'ifyougotherethenyouaredoinggreatiwasstupdthinkingthatmycodewasreallyunbreakablehowevermakingthiswasalotoffunandihopethatyouhadfuntwoyoutrulyareoneoftheelitemyguythespecialwordsyoumustextracttogettheflagaremisspelledlikethefollowingwordpersntomakethissolvableineedtomakethislongersowatchmetalkforaminutethischallengewasareferencetothekryptoscodeitsaveryinterestingstoryandiamsureyoucanfindstuffaboutitontheinternetactuallytherealcodehadfoursectionsandthelastoneremainsunsolvedtothisdayalsothefirstonewasnotacaesarciphersothatsanotherdifferencedoingtwovigniereciphersfeltrepetitievesoihadtochangeitupmaybenowitislongenoughgoodluckandhavefunwiththerestofthecompetition'
+ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+key = 'wolvsec'
+ciphertext = ''
+for i in range(len(plaintext)):
+ p = ALPHABET.index(plaintext[i].upper())
+ k = ALPHABET.index(key[i%len(key)].upper())
+ c = (p + k) % 26
+ ciphertext += ALPHABET[c]
+
+print(ciphertext)

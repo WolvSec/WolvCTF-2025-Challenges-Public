@@ -1,0 +1,3 @@
+congratulations on cracking the first part of the code!
+its not really unbrekable.
+the rest of the challenge will indicate how to extract the flag from the cpher.

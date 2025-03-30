@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: ecbpp
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: eu.gcr.io/kctf-453514/ecbpp-healthcheck:f03bb58bc02726571f5e5f5755c50b6d6a5e23b463fe419e7f1b5595a3fb46ff
+  image: eu.gcr.io/kctf-453514/ecbpp-challenge:2c0659abfcf7083f08811b2b47150f4621e0d6d1cd6e80c19bac606ed1f6e5e4

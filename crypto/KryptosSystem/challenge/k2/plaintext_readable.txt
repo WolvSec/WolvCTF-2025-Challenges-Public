@@ -1,0 +1,4 @@
+i saed in the previous part that i would explain how the flag is obtained from the decoded plaintext
+there are special words you will have to extract from tha code
+follow the flag format and join these words using an underscore
+good luck my fellow cryptanalyst and may you crack all your codes

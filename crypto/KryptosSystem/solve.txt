@@ -1,0 +1,18 @@
+This challenge is a reference to the Unbreakable Kryptos Code
+It is comprised of 3 parts: k1, k2, k3
+The Cipertexts shall be appended together with the transposition cipher in the middle  
+The plaintext will hold instructions as to how to construct the flag
+
+In reference to the Kryptos Code, the flag will be comprised of misspelled words
+
+k1: basic rot13, this is meant to be mega easy
+k2: transposition cipher
+k3: vigniere cipher, but the kryptos alphabet
+
+How to solve?
+Frequency analysis will show that there are three parts to the challenge
+The middle will correspond to an english alphabet, thus a transposition cipher
+the top is literally rot13 
+Then the name is a hint that this is the kryptos code
+thus k3 is a vigniere cipher
+
