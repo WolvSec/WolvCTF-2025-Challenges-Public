@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: evalisevil
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    enabled: true
+    image: eu.gcr.io/kctf-453514/evalisevil-healthcheck:8a02c49413902511913fd52b0a791cad296deaf5bc8735f781337e05421752d9
+  image: eu.gcr.io/kctf-453514/evalisevil-challenge:d9ce36eb7e81fbc3a8dad9b1017bd0338100cb45c606a5c3f52fd2ad80faa33c
